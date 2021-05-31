@@ -24,4 +24,31 @@ full_gradebook = last_semester_gradebook + gradebook
 print(full_gradebook)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II.- 
+II.- BUILT-IN FUNCTIONS PRACTICE (LEN´S PIZZAS)
+# Your code below:
+toppings = ["pepperoni", "pineapple", "cheese", "sausage", "olives", "anchovies", "mushrooms"]
+#1.-Create a new list with the pizzas´prices
+prices = [2, 6, 1, 3, 2, 7, 2]
+#2.-We need to count the number of occurrences of 2 in the prices lists
+num_two_dollar_slices = prices.count(2)
+#3.-Find the length of the toppings list 
+num_pizzas = len(toppings)
+print(num_pizzas)
+#4.- Add the welcoming string message:
+print("We sell "+ str(num_pizzas) + " different kinds of pizza!")
+#5.- Create a 2D List merging the toppings and prices lists
+pizza_and_prices = [[2, "pepperoni"], [6, "pineapple"], [1, "cheese"], [3, "sausage"], [2, "olives"], [7, "anchovies"], [2, "mushrooms"]]
+#6.- Sort the pizza and prices list in ascending price
+pizza_and_prices.sort()
+#7.- Store the first element of pizza and prices list
+cheapest_pizza = pizza_and_prices[:1]
+#8.- Get the last item of pizza and prices
+priciest_pizza = pizza_and_prices[-1:]
+#9.- Remove the last element of pizza and prices
+pizza_and_prices.pop()
+#10.- Add a new topping called peppers 
+pizza_and_prices.insert(4, [2.5, "peppers"])
+#11.- Slice the first 3 elements of pizza and prices
+three_cheapest = pizza_and_prices[:3]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
