@@ -51,4 +51,40 @@ pizza_and_prices.insert(4, [2.5, "peppers"])
 #11.- Slice the first 3 elements of pizza and prices
 three_cheapest = pizza_and_prices[:3]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+III .- ADVANCE FUNCTIONS USING LISTS
+#A) Function that counts every three numbers within a range:
+def every_three_nums(start):
+  return list(range(start, 101, 3))
 
+#B) Remove middle elements in a list:
+def remove_middle(lst, start, end):
+  return lst[:start] + lst[end+1:]
+
+#C) More frequent element in a list, it should return the most frequent element:
+def more_frequent_item(lst, item1, item2):
+  if lst.count(item1) >= lst.count(item2):
+    return item1
+  else:
+      return item2
+
+#D) Double the index value located in an specified index  
+def double_index(lst, index):
+  # Checks to see if index is too big
+  if index >= len(lst):
+    return lst
+  else:
+    # Gets the original list up to index
+    new_lst = lst[0:index]
+ # Adds double the value at index to the new list 
+  new_lst.append(lst[index]*2)
+  #  Adds the rest of the original list
+  new_lst = new_lst + lst[index+1:]
+  return new_lst
+
+#E) Return a middle item in a list
+def middle_element(lst):
+  if len(lst) % 2 == 0:
+    sum = lst[int(len(lst)/2)] + lst[int(len(lst)/2) - 1]
+    return sum / 2
+  else:
+    return lst[int(len(lst)/2)]
